@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20220811</title>
+</head>
+<body>
+    <script lang="javascript">
+        var b, al, ar1;
+        b = window.prompt("Digite o valor da base do retângulo: ");
+        al = window.prompt("Digite o valor da altura do retângulo: ");
+        ar1 = b * al;
+        document.write("A área do retângulo é de " + ar1 + "<br>");
+
+        var at, ar2;
+        at = window.prompt("Digite o valor de uma das arestas do quadrado: ");
+        ar2 = at*at;
+        document.write("A área do quadrado é de " + ar2 + "<br>");
+
+        var d, ar3;
+        d = window.prompt("Digite o valor da diagonal do quadrado: ");
+        // d² = 2l² -> l = √(d²/2) -> l = (d/√2)*(√2/√2) -> l = (d√2)/2
+        // A = l² -> A = ((d√2)/2)² -> A = (2d²)/4 -> A = (d²)/2
+        ar3 = (d * d)/2;
+        document.write("A área do quadrado é de " + ar3+ "<br>");
+
+        var bs, al, ar4;
+        bs = window.prompt("Digite o valor da base do triângulo: ");
+        al = window.prompt("Digite o valor da altura do triângulo: ");
+        ar4 = (bs * al)/2;
+        document.write("A área do triângulo é de " + ar4 + "<br>");
+
+        var v1, v2, v3, v4, media;
+        v1 = window.prompt("Digite um valor qualquer: ");
+        v2 = window.prompt("Digite um valor qualquer: ");
+        v3 = window.prompt("Digite um valor qualquer: ");
+        v4 = window.prompt("Digite um valor qualquer: ");
+        media = (v1 + v2 + v3 + v4) / 4;
+        document.write("A média aritimética entre os quatro valores é de : " + media + "<br>");
+
+        var va1, va2, med;
+        va1 = window.prompt("Digite um valor qualquer: ");
+        va2 = window.prompt("Digite um valor qualquer: ");
+        med = Math.sqrt(va1 * va2);
+        document.write("A média geométrica entre os dois valores é de : " + med + "<br>");
+        
+        var mm, km, m;
+        mm = window.prompt("Insira um valor em milhas marítimas para conversão em quilômetros: ");
+        m = mm * 1852;
+        km = m / 1000;
+        document.write("O valor em quilômetros é de: " + km + "<br>");
+
+        var f, c;
+        c = window.prompt("Insira um valor em graus Celsius para conversão em Fahrenheit: ");
+        f = (1.8 * c) + 32;
+        document.write("O valor em graus Fahrenheit é de: " + f + "° <br>");
+        
+        var n1, n2;
+        n1 = parseInt(window.prompt("Digite um valor qualquer: "));
+        n2 = parseInt(window.prompt("Digite um valor qualquer diferente do anterior: "));
+        if(n1 > n2)
+        {
+            document.write("O maior valor é: " + n1 + "<br>");
+        }
+        else
+        {
+            document.write("O maior valor é: " + n2 + "<br>");
+        }
+
+        var a1, a2;
+        a1 = parseInt(window.prompt("Digite um valor qualquer: "));
+        a2 = parseInt(window.prompt("Digite um valor qualquer: "));
+        if(n1 > n2)
+        {
+            document.write("O maior valor é: " + n1 + "<br>");
+        }
+        else if (n2 > n1)
+        {
+            document.write("O maior valor é: " + n2 + "<br>");
+        }
+        else
+        {
+            document.write("Os valores são iguais. <br>");
+        }
+
+        var p1, p2, me;
+        p1 = parseInt(window.prompt("Digite o valor da sua nota P1: "));
+        p2 = parseInt(window.prompt("Digite o valor da sua nota P2: "));
+        me = (p1 + (2 * p2))/3
+        if (me >= 6)
+        {
+            document.write("Aprovado! <br>");
+        }
+        else
+        {
+            document.write("Reprovado! <br>");
+        }
+
+        var peso, altura, r;
+        peso = parseInt(window.prompt("Digite o peso em quilogramas: "));
+        altura = parseInt(window.prompt("Digite a altura em metros: "));
+        r = (peso/altura) * (peso/altura);
+        if (r < 20)
+        {
+            document.writeln("Abaixo do peso ideal");
+        }
+        else if (25 > r >= 20)
+        {
+            document.writeln("Peso ideal");
+        }
+        else
+        {
+            document.writeln("Acima do peso ideal");
+        }
+
+        var art1, art2, art3;
+        art1 = parseInt(window.prompt("Digite um valor qualquer: "));
+        art2 = parseInt(window.prompt("Digite um valor qualquer: "));
+        art3 = parseInt(window.prompt("Digite um valor qualquer: "));
+        if ((art1 + art2 > art3) && (art2 + art3 > art1) && (art1 + art3 > art2))
+        {
+            if (art1 != art2 != art3)
+            {
+                document.writeln("Os valores formam um triângulo escaleno.");
+            }
+            else if (art1 = art2 = art3)
+            {
+                document.writeln("Os valores formam um triângulo isósceles.");
+            }
+            else
+            {
+                document.writeln("Os valores formam um triângulo equilátero.");
+            }
+        }
+        else
+        {
+            document.writeln("Os valores não formam um triângulo.");
+        }
+
+        var la, lb, lc;
+        la = parseInt(window.prompt("Digite um valor qualquer: "));
+        lb = parseInt(window.prompt("Digite um valor qualquer: "));
+        lc = parseInt(window.prompt("Digite um valor qualquer: "));
+        if((la > lb) && (la > lc))
+        {
+            if ((la*la) = (lb*lb)+(lc*lc))
+            {
+                document.writeln("Os valores formam um triângulo triângulo.");
+            }
+        }
+        else if ((lb > la) && (lb > lc))
+        {
+            if ((lb*lb) = (la*la)+(lc*lc))
+            {
+                document.writeln("Os valores formam um triângulo triângulo.");
+            }
+        }
+        else if ((lc > la) && (lc > lb))
+        {
+            if ((lc*lc) = (la*la)+(lb*lb))
+            {
+                document.writeln("Os valores formam um triângulo triângulo.");
+            } 
+        }
+    </script>
+</body>
+</html>
