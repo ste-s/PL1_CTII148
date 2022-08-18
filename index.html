@@ -104,15 +104,15 @@
         r = (peso/altura) * (peso/altura);
         if (r < 20)
         {
-            document.writeln("Abaixo do peso ideal");
+            document.writeln("Abaixo do peso ideal <br>");
         }
         else if (25 > r >= 20)
         {
-            document.writeln("Peso ideal");
+            document.writeln("Peso ideal <br>");
         }
         else
         {
-            document.writeln("Acima do peso ideal");
+            document.writeln("Acima do peso ideal <br>");
         }
 
         var art1, art2, art3;
@@ -123,47 +123,81 @@
         {
             if (art1 != art2 != art3)
             {
-                document.writeln("Os valores formam um triângulo escaleno.");
+                document.write("Os valores formam um triângulo escaleno. <br>");
             }
             else if (art1 = art2 = art3)
             {
-                document.writeln("Os valores formam um triângulo isósceles.");
+                document.write("Os valores formam um triângulo isósceles. <br>");
             }
             else
             {
-                document.writeln("Os valores formam um triângulo equilátero.");
+                document.write("Os valores formam um triângulo equilátero. <br>");
             }
         }
         else
         {
-            document.writeln("Os valores não formam um triângulo.");
+            document.write("Os valores não formam um triângulo. <br>");
         }
 
         var la, lb, lc;
-        la = parseInt(window.prompt("Digite um valor qualquer: "));
-        lb = parseInt(window.prompt("Digite um valor qualquer: "));
-        lc = parseInt(window.prompt("Digite um valor qualquer: "));
+        la = window.prompt("Digite um valor qualquer: ");
+        lb = window.prompt("Digite um valor qualquer: ");
+        lc = window.prompt("Digite um valor qualquer: ");
         if((la > lb) && (la > lc))
         {
-            if ((la*la) = (lb*lb)+(lc*lc))
+            if ((la*la) == (lb*lb)+(lc*lc))
             {
-                document.writeln("Os valores formam um triângulo triângulo.");
+                document.write("Os valores formam um triângulo retângulo. <br>");
+            }
+            else
+            {
+                document.write("Os valores não formam um triângulo retângulo. <br>");
             }
         }
         else if ((lb > la) && (lb > lc))
         {
-            if ((lb*lb) = (la*la)+(lc*lc))
+            if ((lb*lb) == (la*la)+(lc*lc))
             {
-                document.writeln("Os valores formam um triângulo triângulo.");
+                document.write("Os valores formam um triângulo retângulo. <br>");
+            }
+            else
+            {
+                document.write("Os valores não formam um triângulo retângulo. <br>");
             }
         }
         else if ((lc > la) && (lc > lb))
         {
-            if ((lc*lc) = (la*la)+(lb*lb))
+            if ((lc*lc) == (la*la)+(lb*lb))
             {
-                document.writeln("Os valores formam um triângulo triângulo.");
+                document.write("Os valores formam um triângulo retângulo. <br>");
             } 
+            else
+            {
+                document.write("Os valores não formam um triângulo retângulo. <br>");
+            }
         }
+        else
+        {
+            document.write("Os valores não formam um triângulo retângulo. <br>");
+        }
+
+        var va1,  va2;
+        va1 = parseInt(window.prompt("Digite um valor qualquer: "));
+        do
+        {
+            va2 = parseInt(window.prompt("Digite um valor qualquer maior que o anterior: "));
+        } while (va2 > va1)
+
+        document.write(va2 + " é maior que " + va1);
+
+        var co, tab;
+        co == 1
+        tab == 5
+        do
+        {
+            document.write(tab * co);
+            co++
+        }while(co <= 10)
     </script>
 </body>
 </html>
